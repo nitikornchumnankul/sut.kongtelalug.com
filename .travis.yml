@@ -1,0 +1,18 @@
+language: node_js
+sudo: required
+node_js:
+  - "node"
+install:
+  - npm install -D jest
+  - npm install
+branches:
+  only:
+    - develop
+before_script: 
+  - cd  ./api/customers
+  - chmod 777 ./node_modules/.bin/jest
+script:
+  - npm test
+
+notifications:
+    slack: nitikornproject1:gdCBIXPs27fHWBz4Ymomk5JC
