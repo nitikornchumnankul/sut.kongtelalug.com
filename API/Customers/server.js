@@ -27,3 +27,7 @@ app.use(bodyParser.json());
 app.listen(port, ()=>{
     console.log('Server start on port' + port);
 });
+
+app.get('/',(req,res) =>{
+  res.send('hello world')
+});
