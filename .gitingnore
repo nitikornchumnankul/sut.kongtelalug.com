@@ -1,4 +1,4 @@
-./API/Customers/node_modules
-./API/Products/node_modules
-./API/Users/node_modules
-./API/Venders/node_modules
+./API/customers/node_modules
+./API/products/node_modules
+./API/users/node_modules
+./API/venders/node_modules
