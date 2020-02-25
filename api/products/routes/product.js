@@ -1,9 +1,21 @@
 let express = require('express');
 let router  = express.Router();
 let Product = require('../models/product');
+let multer = require('multer');
 let app = require('../server');
-let Grid = require('gridfs-stream');
 
+const storage = multer.diskStorage({
+    destination: function(req,file,cb){
+        cb(null,'../products/uploads/')
+    },
+    filename: function(req,file,cb){
+        cb(null,file.originalname)
+    }
+});
+    
+const upload = multer({ 
+    storage: storage 
+});
 
 
 
@@ -28,11 +40,11 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/addProduct',async (req, res) => {  
-    console.log(req)
+    console.log(req.image)
     try{
         let product = new Product({
             name:req.body.name,
-            image: req.file.filename
+            image:req.body.image
         });
         product.save();
         res.status(201).end();

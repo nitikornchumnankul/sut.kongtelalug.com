@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'front-end';
+  name:string;
+
+  onClick(){
+    this.name = "hello world"
+  }
+  ngOnInit() {
+   
+    
+  }
 }
+
