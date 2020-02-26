@@ -2,7 +2,10 @@ let express = require('express');
 let router  = express.Router();
 let Product = require('../models/product');
 let multer = require('multer');
-let app = require('../server');
+// let app = require('../server');
+let app = express();
+
+
 
 const storage = multer.diskStorage({
     destination: function(req,file,cb){
