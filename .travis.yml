@@ -20,8 +20,8 @@ before_script:
   - chmod 777 ./node_modules/.bin/jest
   - ls
 script:
-  - docker build -t nitikornchumnankul/customers . 
-  - docker push nitikornchumnankul/customers:v1.1.2
+  -  ./script.sh
+  
 
 notifications:
     slack: nitikornproject1:gdCBIXPs27fHWBz4Ymomk5JC
