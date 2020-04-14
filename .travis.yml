@@ -22,5 +22,3 @@ before_script:
   - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
 script:
   -  ./script.sh
-notifications:
-    slack: nitikornproject1:gdCBIXPs27fHWBz4Ymomk5JC
