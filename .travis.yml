@@ -19,6 +19,7 @@ before_script:
   - chmod 777 script.sh
   - git config --local user.name "$GIT_USERNAME"
   - git config --local user.email "$GIT_EMAIL"
-  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+  - TRAVIS_TAG=${TRAVIS_TAG:$(git log --format=%h -1)}
+  
 script:
   -  ./script.sh
