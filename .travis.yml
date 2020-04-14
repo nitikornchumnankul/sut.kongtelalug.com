@@ -18,6 +18,7 @@ branches:
 before_script: 
   - cd  ./api/customers
   - chmod 777 ./node_modules/.bin/jest
+  - chmod 777 script.sh
   - ls
 script:
   -  ./script.sh
