@@ -18,8 +18,9 @@ branches:
 before_script: 
   - cd  ./api/customers
   - chmod 777 ./node_modules/.bin/jest
+  - ls
 script:
-  - docker build nitikornchumnankul/customers . 
+  - docker build -t nitikornchumnankul/customers . 
   - docker push nitikornchumnankul/customers:v1.1.2
 
 notifications:
