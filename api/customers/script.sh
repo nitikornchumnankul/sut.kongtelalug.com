@@ -1,2 +1,4 @@
-docker build -t nitikornchumnankul/customers:v1.1.2 .
-docker push nitikornchumnankul/customers:v1.1.2
+
+
+docker build -t $DOCKER_USERNAME/customers:$TRAVIS_TAG .
+docker push $DOCKER_USERNAME/customers:$TRAVIS_TAG
