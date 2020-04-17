@@ -26,10 +26,10 @@ export class RegisterComponent implements OnInit {
 
 
     const formData = new FormData();
-    formData.append('name', this.name);
-    formData.append('email', this.email);
-    formData.append('username', this.username);
-    formData.append('password', this.password);
+    // formData.append('name', this.name);
+    // formData.append('email', this.email);
+    // formData.append('username', this.username);
+    // formData.append('password', this.password);
     formData.append('role', 'users');
 
 

@@ -32,17 +32,18 @@ export class HomeComponent implements OnInit {
     this.authService.storeProductData(product);
     this.router.navigate(['editproduct']);
   }
-  onDeleteProduct(product: any) {
-    this.authService.deleteProduct(product._id).subscribe(data => {
-      if (data.success) {
-        this.toastr.success('Successfully Deleted!', 'Delete!', {timeOut: 2000,});
-        this.router.navigate(['/products']);
-      } else {
-        this.toastr.error('Something went wrong!', 'Error!', { timeOut: 2000, });
-        this.router.navigate(['/products']);
-      }
-    });
-  }
+  
+  // onDeleteProduct(product: any) {
+  //   this.authService.deleteProduct(product._id).Subscription(data => {
+  //     if (data.success) {
+  //       this.toastr.success('Successfully Deleted!', 'Delete!', {timeOut: 2000,});
+  //       this.router.navigate(['/products']);
+  //     } else {
+  //       this.toastr.error('Something went wrong!', 'Error!', { timeOut: 2000, });
+  //       this.router.navigate(['/products']);
+  //     }
+  //   });
+  // }
 
   onAddProductToCart(){
   
