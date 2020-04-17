@@ -14,8 +14,9 @@ branches:
   only:
     - master
 before_script: 
-  - cd  ./api/customers
-  - chmod 777 ./node_modules/.bin/jest
+  # - cd  ./api/customers
+  # - chmod 777 ./node_modules/.bin/jest
+  - cd ./frontend
   - chmod 777 script.sh
   - git config --local user.name "$GIT_USERNAME"
   - git config --local user.email "$GIT_EMAIL"
