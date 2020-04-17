@@ -31,7 +31,7 @@ export class AuthService {
     console.log(user)
 
  
-    return this.http.post('http://localhost:8080/users/register', user,options).subscribe(res =>{
+    return this.http.post('http://0.0.0.0:8080/users/register', user,options).subscribe(res =>{
       console.log(res)
       if(true){
         this.flashMessage.show('Successfully Registered', { cssClass: 'alert-success', timeout: 3000 });
@@ -49,7 +49,7 @@ export class AuthService {
       'Content-Type': 'application/json',    
     });
     let options = { headers: headers };
-    return this.http.post('http://localhost:8080/users/authenticate', user,options)
+    return this.http.post('http://0.0.0.0:8080/users/authenticate', user,options)
 
   }
   loadToken() {
@@ -78,7 +78,7 @@ export class AuthService {
     let options = { headers: headers };
     this.loadToken();
 
-    return this.http.post<any>('http://localhost:8080/users/addproduct', product, options).subscribe(res => {
+    return this.http.post<any>('http://0.0.0.0:8080/users/addproduct', product, options).subscribe(res => {
       if (res.success) {
         Swal.fire({
           type: 'success',
@@ -125,7 +125,7 @@ export class AuthService {
     let options = { headers: headers };
     this.loadToken();
 
-    return this.http.delete('http://localhost:8080/users/deleteproduct/' + productID,options).subscribe(res => {
+    return this.http.delete('http://0.0.0.0:8080/users/deleteproduct/' + productID,options).subscribe(res => {
       console.log(res)
     })
 
