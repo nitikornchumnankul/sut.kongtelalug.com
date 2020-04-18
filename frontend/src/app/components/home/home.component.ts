@@ -20,7 +20,8 @@ export class HomeComponent implements OnInit {
   
   constructor(private authService: AuthService,
     private router: Router, 
-    private toastr: ToastrService) {
+    private toastr: ToastrService)
+      {
      }
 
 
