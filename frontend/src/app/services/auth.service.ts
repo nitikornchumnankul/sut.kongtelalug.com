@@ -22,6 +22,7 @@ export class AuthService {
     private router: Router,
     private flashMessage:FlashMessagesService
   ) { }
+  
   registerUser(user) {
     
     let headers = new HttpHeaders({
